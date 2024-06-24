@@ -1,0 +1,598 @@
+:root {
+    --color--background: #0b011d;
+    --color--glass--effect: #fafafa10;
+    --color--btn: #fafafa10;
+    --color--btn--before: #bd9fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+body {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: var(--color--background);
+    /* border: solid white; */
+    color: white;
+    padding: 5px;
+}
+
+
+
+/* TITLES */
+
+h2 {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+    ;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* BUTTON */
+.btn {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 700;
+
+
+    color: white;
+    background-color: var(--color--button);
+    border: solid 1px #fafafa10;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: var(--color--btn--before);
+    transition: all 500ms ease;
+    z-index: -1;
+}
+
+.btn--1::before {
+    left: -520px;
+    right: 0;
+    width: 100%;
+    height: 150%;
+    transition: all 1s ease;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px #bd9fff, 0 0 20px #bd9fff, 0 0 20px #bd9fff;
+}
+
+.btn--1:hover::before {
+    left: 520px;
+}
+
+
+
+
+
+
+
+/* IMAGENES */
+.img-container {
+    /* Esto hace que el contenedor sea redondo */
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    /* Esto asegura que la imagen se ajuste bien dentro del contenedor sin deformarse */
+    object-position: top;
+    /* Centra la imagen dentro del contenedor */
+}
+
+
+
+
+/* MENU */
+.menu-container {
+    position: sticky;
+    top: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    margin: auto;
+    width: fit-content;
+    height: 50px;
+    border: solid 1px #2d2641;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+.nav-container ul {
+    text-align: center;
+    margin: 12px;
+}
+
+.nav-container li {
+    color: white;
+    display: inline;
+    margin: 5px;
+}
+
+.glass-effect {
+    background: var(--color--glass--effect);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+/* INICIO */
+.title__container {
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+    padding: 200px 80px;
+    margin-bottom: 100px;
+}
+
+.title__background {
+    position: absolute;
+}
+
+.title__background h1 {
+    -webkit-text-stroke: 1px #fafafa10;
+    color: rgba(255, 255, 255, 0.042);
+    font-size: 150px;
+}
+
+.main__title h1,
+h6 {
+    margin-bottom: 40px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+    ;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+
+
+
+
+
+
+
+/* SECTION SECOND */
+.conteiner {
+    /* Grid */
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+}
+
+#info-container {
+    /* Grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+}
+
+.icons {
+    height: 100%;
+}
+
+
+
+
+
+/* CARD */
+.presentation-card {
+    border-radius: 20px;
+}
+
+.presentation-card h2 {
+    text-align: left;
+    font-size: 30px;
+}
+
+.presentation-card p {
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.grid-card-blur {
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.04) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.01);
+    backdrop-filter: blur(8.5px);
+    border-radius: 12px;
+    padding: 32px 2em
+}
+
+.grid__card {
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.137) 0%, rgba(126, 61, 255, 0) 100%), rgb(11, 1, 29);
+    border-radius: 12px;
+    padding: 32px 2em
+}
+
+.text {
+    height: 100%;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 50px;
+}
+
+
+#description-element1 {
+    grid-column: 1/4;
+}
+
+#element4 {
+    grid-column: 2/5;
+}
+
+.center {
+    align-items: center;
+}
+
+
+
+
+
+
+/* Imagen redonda Joel */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    /* Ajusta el tamaño del contenedor */
+    height: 150px;
+    /* Asegúrate de que la altura y el ancho sean iguales para un círculo perfecto */
+    border-radius: 50%;
+    /* Esto hace que el contenedor sea redondo */
+    overflow: hidden;
+
+    /* Esto asegura que la imagen no se desborde fuera del contenedor */
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -18px;
+    left: -25px;
+
+    object-fit: cover;
+    /* Esto asegura que la imagen se ajuste bien dentro del contenedor sin deformarse */
+    object-position: top;
+    /* Centra la imagen dentro del contenedor */
+}
+
+
+
+
+
+/* Icons Social */
+.icons-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #fafafa10;
+    border-radius: 50px;
+    list-style: none;
+}
+
+.icons-social a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 53px;
+    background: #2d2641;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: .5s;
+}
+
+.icons-social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #bd9fff;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.icons-social a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #bd9fff;
+}
+
+.icons-social a:hover {
+    color: #bd9fff;
+    box-shadow: 0 0 5px #bd9fff;
+    text-shadow: 0 0 5px #bd9fff;
+}
+
+
+
+
+
+
+/* PROYECTS */
+.proyects__list {
+    position: relative;
+    border: solid 1px red;
+}
+
+#proyects-container {
+    margin-top: 200px;
+}
+
+#proyects-container h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.line {
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+
+
+.row-container {
+    display: flex;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+
+}
+
+.line-item {
+    padding: 30px;
+
+}
+
+.text-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px 80px;
+}
+
+.kills-proyect {
+    display: flex;
+}
+
+.kills-proyect div {
+    margin-right: 20px;
+}
+
+.img-proyect {
+    width: 100%;
+    object-fit: cover;
+    /* Esto asegura que la imagen se ajuste bien dentro del contenedor sin deformarse */
+    object-position: center;
+    /* Centra la imagen dentro del contenedor */
+    border-radius: 15px;
+}
+
+.img__telephone {
+    width: 100%;
+}
+
+
+.telephone__container {
+    position: absolute;
+    top: 2350px;
+    left: 1150px;
+}
+
+.telephone__card {
+    height: 440px;
+    width: 250px;
+    margin: 30px auto;
+    background-color: black;
+    min-height: 300px;
+
+    border-radius: 1.5em;
+    position: relative;
+}
+
+.telephone__content {
+    overflow: hidden;
+    position: absolute;
+    inset: 3%;
+    border-radius: 1.5em;
+    background-color: white;
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "content";
+}
+
+.telephone__proyect {
+    position: relative;
+    grid-area: content;
+    background-image: url(/static/img/proyects/movil-bocatto.png);
+    background-repeat: no-repeat;
+}
+
+.telephone__proyect::before {
+    content: "";
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    height: 20px;
+    background-color: black;
+    border-radius: 0 0 20px 20px;
+}
+
+.telephone__container:hover {
+    scale: 2;
+    transition: 2s;
+}
+
+
+
+
+
+/* ABOUT ME + KILLS */
+
+.text__me h2 {
+    text-align: left;
+    font-size: 40px;
+}
+
+.text__me p {
+    width: 400px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.article__container {
+    margin: 100px 0;
+    padding: 80px 0;
+    /* border: solid red; */
+}
+
+.card__container {
+    /* Grid */
+    display: grid;
+    gap: 50px;
+}
+
+.card__aboutme {
+    margin: 0 auto;
+    min-height: 750px;
+    min-width: 650px;
+    max-width: 650px;
+    text-align: center;
+}
+
+.title__kills h1 {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+    ;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-size: 40px;
+}
+
+.cards__kills {
+    position: sticky;
+    top: 200px;
+    margin: 0 auto;
+    min-height: 400px;
+    max-width: 800px;
+    min-width: 800px;
+    text-align: center;
+    margin-bottom: 100px;
+    transition: top 0.2s, transform 0.2s;
+}
+
+
+
+/* CONTACT ME AND STUDIES */
+.grid__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.student__card{
+    
+}
+
+
+
+
+/* #hola{
+    grid-column: 1/4
+} */
+
+
+
+
+/* .grid-card {
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.04) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.01);
+    backdrop-filter: blur(8.5px);
+    border-radius: 12px;
+    padding: 32px 2em
+} */
+
+
+
+
+
+
+
+
+/* EFFECT REVEAL */
+.effect__reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+
+}
+
+.lineal__growth {
+    animation: progress-lineal auto linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0 100px;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+
+}
+
+@keyframes progress-lineal {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 300px;
+    }
+}
