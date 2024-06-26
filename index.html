@@ -146,7 +146,7 @@
 
     </article>
 
-    <article id="proyects-container">
+    <article id="proyects-container" class="effect__article">
 
       <div>
         <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -246,7 +246,7 @@
 
     </article>
 
-    <article class="article__container" style="margin-top: 300px;">
+    <article class="article__container effect__article" style="margin-top: 300px;">
 
       <div class="card__container">
 
@@ -270,7 +270,7 @@
     </article>
 
 
-    <article class="article__container">
+    <article class="article__container effect__article">
       <div class="card__container">
 
         <div class="title__kills">
@@ -414,49 +414,110 @@
 
 
 
-    <article class="article__container effect__article">
+    <article class=" effect__article">
 
       <div class="grid__container">
 
         <div class="student__card grid__card">
           <div class="text">
-            
+
             <div>
               <h3>
                 Estudios
               </h3>
             </div>
-            <div>
-              <h4>
-                Cepi - Base | Noviembre 2021 - Julio 2023
-              </h4>
-              <p>
-                Técnico Superior en Aplicaciones web y desarrollo con Python
-              </p>
-  
-              <h5>
-                Universidad FICA Villa Mercedes | Septiembre 2019 - 2021 (no finalizada)
-              </h5>
-              <p>
-                Ingenieria mecatronica 
-              </p>
-            </div>            
+
+            <div class="text__studies">
+              <div>
+                <h4>
+                  Cepi - Base | Noviembre 2021 - Julio 2023
+                </h4>
+                <p>
+                  Técnico Superior en Aplicaciones web y desarrollo con Python
+                </p>
+              </div>
+
+              <div>
+                <h4>
+                  Universidad FICA Villa Mercedes | Septiembre 2019 - 2021
+                </h4>
+                <p>
+                  Ingenieria mecatronica (no finalizada)
+                </p>
+              </div>
+            </div>
 
           </div>
         </div>
 
-        <div class="contact__card grid__card">
+        <div class=" grid__card">
           <div class="text">
             <h1>
               Contactame
             </h1>
 
-            <h5>
-              Universidad FICA Villa Mercedes
-            </h5>
-            <p>
-              Técnico Superior en Aplicaciones web y desarrollo con Python
-            </p>
+            <div class="form__content">
+
+              <div>
+                <label>Email</label>
+
+                <div class="date__container">
+                  <span class="span__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                      <path d="M3 7l9 6l9 -6" />
+                    </svg>
+                  </span>
+
+                  <input class="input" placeholder="Su Correo">
+                </div>
+              </div>
+
+              <div>
+                <label>Telefono</label>
+
+                <div class="date__container">
+                  <span class="span__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                      <path d="M3 7l9 6l9 -6" />
+                    </svg>
+                  </span>
+
+                  <input class="input" placeholder="Su Telefono">
+                </div>
+              </div>
+
+              <div>
+                <label>Mensaje</label>
+
+                <div class="date__container">
+                  <span class="span__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                      <path d="M3 7l9 6l9 -6" />
+                    </svg>
+                  </span>
+
+                  <textarea class="message" placeholder="Escriba su mensaje"></textarea>
+                </div>
+              </div>
+
+              <div class="text  effect__reveal">
+                <button type="button" class="btn btn--1">Enviar</button>
+              </div>
+
+            </div>
+
           </div>
         </div>
 
@@ -465,6 +526,12 @@
     </article>
 
   </section>
+
+  <footer class="article__container effect__article">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam corporis voluptas fuga repellendus, ad
+    voluptatibus voluptate nesciunt in nihil provident ipsa laudantium est dolorum, obcaecati sint consectetur. Vel,
+    amet ab?
+  </footer>
 
   <script src="/javascript/index.js"></script>
 </body>
