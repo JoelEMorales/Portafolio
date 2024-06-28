@@ -21,16 +21,19 @@
           <a>foto | </a>
         </li>
         <li>
-          <a href="#">Sobre Mi</a>
+          <a href="#home">Inicio</a>
         </li>
         <li>
-          <a href="#">Social</a>
+          <a href="#proyects">Proyectos</a>          
         </li>
         <li>
-          <a href="#">Proyectos</a>
+          <a href="#boutme">Sobre Mi</a>
         </li>
         <li>
-          <a href="#">Tecnologias</a>
+          <a href="#kills">Tecnologias</a>
+        </li>
+        <li>
+          <a href="#studies">Tecnologias</a>
         </li>
       </ul>
     </nav>
@@ -54,7 +57,7 @@
       </div>
     </article>
 
-    <article class="conteiner">
+    <article class="conteiner" id="home" style="padding: 200px 0 200px 0px;">
 
       <div id="info-container">
 
@@ -72,8 +75,8 @@
               <img style="width: 300px;" src="/static/img/photosaboutme/WhatsApp Image 2024-05-24 at 11.21.17.jpeg"
                 alt="Avatar Logo" class="avatar" aling="left">
             </div>
-            <button type="button" class="btn btn--1">Descargar
-              CV</button>
+            <a type="button" href="/static/archives/Curriculum.Programador - Joel Morales.pdf" class="btn btn--1" download="Curriculum.Programador - Joel Morales.pdf">Descargar
+              CV</a>
           </div>
         </div>
 
@@ -100,7 +103,7 @@
 
           <ul class="text center">
 
-            <li class="icons-social glass-effect">
+            <li class="icons-social glass-effect" onclick="location.href='https://github.com/JoelEMorales'">
               <a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -146,7 +149,7 @@
 
     </article>
 
-    <article id="proyects-container" class="effect__article">
+    <article id="proyects" class="proyects-container" class="effect__article">
 
       <div>
         <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -246,7 +249,7 @@
 
     </article>
 
-    <article class="article__container effect__article" style="margin-top: 300px;">
+    <article id="boutme" class="article__container effect__article" style="margin-top: 300px;">
 
       <div class="card__container">
 
@@ -270,7 +273,7 @@
     </article>
 
 
-    <article class="article__container effect__article">
+    <article class="article__container effect__article" id="kills">
       <div class="card__container">
 
         <div class="title__kills">
@@ -414,7 +417,7 @@
 
 
 
-    <article class=" effect__article">
+    <article class=" effect__article" id="studies">
 
       <div class="grid__container">
 
