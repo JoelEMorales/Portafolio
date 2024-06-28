@@ -18,7 +18,9 @@ html {
 
 }
 
-
+a {
+    text-decoration: none;
+}
 
 body {
     max-width: 70%;
@@ -139,13 +141,14 @@ h2 {
     margin: 5px;
 }
 
-.nav-container a{
+.nav-container a {
     text-decoration: none;
-    color: white;;
+    color: white;
+    ;
     transition: .5s;
 }
 
-.nav-container a:hover{
+.nav-container a:hover {
     color: #decfff;
     text-shadow: 0 0 5px #bd9fff;
     font-size: 20px;
