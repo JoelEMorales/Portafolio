@@ -643,7 +643,7 @@ h6 {
 .effect__reveal {
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 30% cover 40%;
+    animation-range: entry 30% cover 36%;
 
 }
 
