@@ -29,10 +29,6 @@ body {
     padding: 5px;
 }
 
-a {
-    text-decoration: none;
-}
-
 
 
 /* TITLES */
@@ -143,11 +139,30 @@ h2 {
     margin: 5px;
 }
 
+.nav-container a{
+    text-decoration: none;
+    color: white;;
+    transition: .5s;
+}
+
+.nav-container a:hover{
+    color: #decfff;
+    text-shadow: 0 0 5px #bd9fff;
+    font-size: 20px;
+}
+
 .glass-effect {
     background: var(--color--glass--effect);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
+
+
+
+
+
+
 
 
 
