@@ -88,6 +88,26 @@ h2 {
 
 
 
+/* ICONS EFECTS */
+.effect__svg svg{
+transition: 0.5s;
+}
+
+.effect__svg svg:hover{
+    transform: scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,7 +460,7 @@ h6 {
 
 .telephone__container {
     position: absolute;
-    top: 2890px;
+    top: 2765px;
     left: 1150px;
 }
 
