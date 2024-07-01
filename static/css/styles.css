@@ -89,11 +89,11 @@ h2 {
 
 
 /* ICONS EFECTS */
-.effect__svg svg{
-transition: 0.5s;
+.effect__svg svg {
+    transition: 0.5s;
 }
 
-.effect__svg svg:hover{
+.effect__svg svg:hover {
     transform: scale(1.5);
 }
 
@@ -723,14 +723,13 @@ h6 {
 
 
 /* AVAILABLE YO WORK */
-.available__contect{
+.available__contect {
+    height: 100%;
     display: flex;
-    justify-content: center;
-    -ms-align-intem: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.available__work{
+.available__work {
     display: flex;
     justify-content: center;
     -ms-align-intem: center;
@@ -742,23 +741,26 @@ h6 {
     border: solid 2px var(--color--glass--effect);
     overflow: hidden;
 }
-.available__work span{
+
+.available__work span {
     margin-right: 5px;
 }
-.available__work a{
+
+.available__work a {
     z-index: 999;
 }
 
-.available__work::before{
+.available__work::before {
     content: '';
     position: absolute;
     background: linear-gradient(#00ccff, #d500f9);
     width: 100%;
     height: 59px;
     animation: rotate 4s linear infinite;
+    -webkit-animation: rotate 4s linear infinite;
 }
 
-.available__work::after{
+.available__work::after {
     content: '';
     position: absolute;
     background: var(--color--background);
@@ -767,10 +769,66 @@ h6 {
 }
 
 @keyframes rotate {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
+    }
+}
+
+
+/* SLIDER ICONS */
+
+
+.slider__contect_L{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slide__track_L {
+    display: flex;
+    gap: 24px;
+    -webkit-animation: sliding_L 30s linear infinite;
+    animation: sliding_L 30s linear infinite;
+}
+
+
+@keyframes sliding_L {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider__contect_R{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slide__track_R {
+    display: flex;
+    gap: 24px;
+    -webkit-animation: sliding_R 40s linear infinite;
+    animation: sliding_R 40s linear infinite;
+}
+
+.slide svg{
+    color: #757575b0;
+}
+
+@keyframes sliding_R {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }

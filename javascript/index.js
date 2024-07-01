@@ -127,3 +127,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+//SLIDER
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sliderTrack = document.querySelector('.slide__track_L');
+    const slides = document.querySelectorAll('.slide');
+    const slideCount = slides.length;
+
+    // Clonamos los elementos para tener una copia completa del set
+    for (let i = 0; i < slideCount; i++) {
+        const clone = slides[i].cloneNode(true);
+        sliderTrack.appendChild(clone);
+    }
+
+    // Aseguramos que la animación ocupe el espacio necesario
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const slideWidth = slides[0].offsetWidth + 24; // including gap
+    const trackWidth = totalSlides * slideWidth;
+
+    sliderTrack.style.width = `${trackWidth}px`;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sliderTrack = document.querySelector('.slide__track_R');
+    const slides = document.querySelectorAll('.slide');
+    const slideCount = slides.length;
+
+    // Clonamos los elementos para tener una copia completa del set
+    for (let i = 0; i < slideCount; i++) {
+        const clone = slides[i].cloneNode(true);
+        sliderTrack.appendChild(clone);
+    }
+
+    // Aseguramos que la animación ocupe el espacio necesario
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const slideWidth = slides[0].offsetWidth + 24; // including gap
+    const trackWidth = totalSlides * slideWidth;
+
+    sliderTrack.style.width = `${trackWidth}px`;
+});
