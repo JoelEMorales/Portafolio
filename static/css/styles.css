@@ -314,16 +314,13 @@ h6 {
     justify-content: center;
     align-items: center;
     width: 150px;
-    /* Ajusta el tamaño del contenedor */
     height: 150px;
-    /* Asegúrate de que la altura y el ancho sean iguales para un círculo perfecto */
     border-radius: 50%;
-    /* Esto hace que el contenedor sea redondo */
     overflow: hidden;
-
-    /* Esto asegura que la imagen no se desborde fuera del contenedor */
     position: relative;
+    box-shadow: 0 0 10px #d500f9;
 }
+
 
 .avatar {
     position: absolute;
@@ -779,8 +776,14 @@ h6 {
 }
 
 
+
+
+
 /* SLIDER ICONS */
 
+.slide svg{
+    color: #757575b0;
+}
 
 .slider__contect_L{
     overflow: hidden;
@@ -817,10 +820,6 @@ h6 {
     gap: 24px;
     -webkit-animation: sliding_R 40s linear infinite;
     animation: sliding_R 40s linear infinite;
-}
-
-.slide svg{
-    color: #757575b0;
 }
 
 @keyframes sliding_R {
