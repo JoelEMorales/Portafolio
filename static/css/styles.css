@@ -512,7 +512,7 @@ h6 {
 
 
 
-/* ABOUT ME + KILLS */
+/* ABOUT ME */
 
 .text__me h2 {
     text-align: left;
@@ -545,6 +545,8 @@ h6 {
     text-align: center;
 }
 
+/* KILLS */
+
 .title__kills h1 {
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
     ;
@@ -565,6 +567,15 @@ h6 {
     margin-bottom: 100px;
     transition: top 0.2s, transform 0.2s;
 }
+.cards__kills.scaled {
+    transform: scale(0.8);
+    top: 200px; /* Añadir 20px al top */
+    transition: top 0.2s, transform 0.2s;
+}
+
+
+
+
 
 
 

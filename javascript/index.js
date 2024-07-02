@@ -72,53 +72,75 @@
 
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const elements = document.querySelectorAll('.cards__kills');
+
+//     const observerOptions = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: 0.99 // Umbral para observar cuando el segundo elemento cubre al primero al 50%
+//     };
+
+//     elements.forEach((el, index) => {
+//         if (index < elements.length - 1) {
+//             const nextEl = elements[index + 1];
+
+//             const observer = new IntersectionObserver((entries) => {
+//                 entries.forEach(entry => {
+//                     if (entry.target === nextEl && entry.intersectionRatio > 0.99) {
+//                         el.classList.add('scaled');
+//                     } else {
+//                         el.classList.remove('scaled');
+//                     }
+//                 });
+//             }, observerOptions);
+
+//             observer.observe(nextEl);
+//         }
+//     });
+// });
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM completamente cargado y analizado');
-    const stickies = document.querySelectorAll('.cards__kills');
-    console.log('Elementos sticky:', stickies);
-
+    const elements = document.querySelectorAll('.cards__kills');
 
     let topOffset = 200; // Valor inicial ajustado
-    let topOnset = 280; // Valor final ajustado
-    let lastStickyIndex = -1; // Para rastrear el último elemento que se fijó
-    let ultimo = 0;
 
-    console.log('el top es:', topOffset, 'y el elemento es:', lastStickyIndex);
-    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.99 // Umbral para observar cuando el segundo elemento cubre al primero al 50%
+    };
 
-    window.addEventListener('scroll', () => {
-        // console.log('Scroll detectado');
+    elements.forEach((el, index) => {
+        if (index < elements.length - 1) {
+            const nextEl = elements[index + 1];
 
-        stickies.forEach((sticky, index) => {
-            const stickyRect = sticky.getBoundingClientRect();
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.target === nextEl && entry.intersectionRatio > 0.99) {
+                        el.classList.add('scaled');
+                        el.style.transform = 'scale(0.8)';
+                        el.style.top = `${topOffset}px`;
+                        topOffset += 20;
+                    } else {
+                        el.classList.remove('scaled');
+                        el.style.transform = 'scale(1)';
+                        el.style.top = '200px'; // Valor inicial ajustado
+                        topOffset = 200; // Reiniciar el offset
+                    }
+                });
+            }, observerOptions);
 
-            ultimo += stickies.length - 1;
-
-            if (topOffset == 280) {
-
-                return console.log('no pasa nada');
-
-            } else if (topOffset > 280 && index > lastStickyIndex ) {
-
-                lastStickyIndex = index - 1;
-                sticky.style.top = '230px'; // Valor inicial ajustado
-                sticky.style.transform = 'scale(1)';
-
-            }else if (stickyRect.top <= topOffset && index > lastStickyIndex) {
-                
-                lastStickyIndex = index; // Actualiza el índice del último elemento fijado
-                sticky.style.top = `${topOffset}px`;
-                topOffset += 20; // Aumentamos el topOffset para el siguiente elemento
-                sticky.style.transform = 'scale(0.7)';
-
-            }
-
-        });
-        console.log('el top es:', topOffset, 'y el elemento es:', lastStickyIndex);
-        console.log('el ultimo elemento es:', ultimo);
+            observer.observe(nextEl);
+        }
     });
 });
+
+
+
+
+
 
 // else if (stickyRect.top = topOnset) {
 //     sticky.style.top = '230px'; // Valor inicial ajustado
@@ -130,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //SLIDER
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const sliderTrack = document.querySelector('.slide__track_L');
     const slides = document.querySelectorAll('.slide');
     const slideCount = slides.length;
@@ -149,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
     sliderTrack.style.width = `${trackWidth}px`;
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const sliderTrack = document.querySelector('.slide__track_R');
     const slides = document.querySelectorAll('.slide');
     const slideCount = slides.length;
