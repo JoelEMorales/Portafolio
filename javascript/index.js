@@ -104,12 +104,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.cards__kills');
 
-    let topOffset = 200; // Valor inicial ajustado
-
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.99 // Umbral para observar cuando el segundo elemento cubre al primero al 50%
+        threshold: 0.99 // Umbral para observar cuando el siguiente elemento cubre al anterior al 99%
     };
 
     elements.forEach((el, index) => {
@@ -121,13 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (entry.target === nextEl && entry.intersectionRatio > 0.99) {
                         el.classList.add('scaled');
                         el.style.transform = 'scale(0.8)';
-                        el.style.top = `${topOffset}px`;
-                        topOffset += 20;
+                        el.style.top = `${200 + (index + 1) * 20}px`; // Sumar 20px por cada índice
                     } else {
                         el.classList.remove('scaled');
                         el.style.transform = 'scale(1)';
                         el.style.top = '200px'; // Valor inicial ajustado
-                        topOffset = 200; // Reiniciar el offset
                     }
                 });
             }, observerOptions);
@@ -136,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
