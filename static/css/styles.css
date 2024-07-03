@@ -31,6 +31,16 @@ body {
     padding: 5px;
 }
 
+.effect__article {
+
+    border-top: solid 1px;
+    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.062) 0%, rgba(126, 61, 255, 0) 100%), rgb(11, 1, 29);
+    border-image: radial-gradient(white 10%, var(--color--background) 90%) 1;
+
+
+    padding: 150px 0px 150px;
+}
+
 
 
 /* TITLES */
@@ -545,6 +555,11 @@ h6 {
     text-align: center;
 }
 
+
+
+
+
+
 /* KILLS */
 
 .title__kills h1 {
@@ -573,6 +588,15 @@ h6 {
     transition: top 0.2s, transform 0.2s;
 }
 
+.grid__card__kills {
+    border-top: solid 1px rgba(255, 255, 0.1);
+    border-bottom: solid 1px rgba(255, 255, 0.1);
+    border-image: radial-gradient(white 43%, var(--color--background) 83%) 1;
+    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.137) 0%, rgba(126, 61, 255, 0) 100%), rgb(11, 1, 29);
+    border-radius: 12px;
+    padding: 32px 2em
+}
+
 
 
 
@@ -595,15 +619,7 @@ h6 {
 }
 
 
-.effect__article {
 
-    border-top: solid 1px;
-    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.062) 0%, rgba(126, 61, 255, 0) 100%), rgb(11, 1, 29);
-    border-image: radial-gradient(white 10%, var(--color--background) 90%) 1;
-
-
-    padding: 150px 0px 150px;
-}
 
 
 
