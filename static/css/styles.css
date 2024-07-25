@@ -24,7 +24,7 @@ a {
 }
 
 body {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
     background-color: var(--color--background);
     /* border: solid white; */
@@ -148,22 +148,24 @@ h2 {
 
 
 
-/* MENU */
+/* MAIN MENU */
 .menu-container {
+    width: auto;
+    padding: 10px 0;    
+    display: flex;
+
     position: sticky;
     top: 0;
+
     margin-bottom: 50px;
-    width: 100%;
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
+    
     z-index: 1000;
+    
 }
 
 .nav-container {
     margin: auto;
-    width: fit-content;
-    height: 50px;
+    width: auto;
     border: solid 1px #2d2641;
     border-radius: 50px;
     opacity: 1;
@@ -197,6 +199,56 @@ h2 {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .nav-container {
+        width: auto;
+        height: auto;
+    }
+
+    .nav-container a {
+        font-size: 0.875em; /* Tamaño de fuente reducido */
+    }
+
+    .nav-container a:hover {
+        font-size: 1em; /* Tamaño de fuente reducido */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* MAIN MENU */
+
+    .menu-container {
+        width: auto;
+        padding: 10px 0;    
+        display: flex;
+    
+        position: sticky;
+        top: 0;
+    
+        margin-bottom: 50px;
+        
+        z-index: 1000;
+        
+    }
+    .nav-container {
+        margin: auto;
+        width: auto;
+    }
+
+    .nav-container a {
+        font-size: 0.61em; /* Tamaño de fuente aún más reducido */
+    }
+
+    .nav-container a:hover {
+        font-size: 0.875em; /* Tamaño de fuente reducido */
+    }
+
+
+
+    /* MAIN TITLE */
+}
 
 
 
@@ -206,20 +258,21 @@ h2 {
 
 
 
-
-/* INICIO */
+/* MAIN TITLE */
 .title__container {
     position: relative;
-    font-size: 50px;
+    width: 100%;    
     text-align: center;
-    padding: 200px 80px;
+    padding: 200px 0;
     margin-bottom: 100px;
 }
 
 .title__background {
     position: absolute;
-    margin: 0 70px;
+    width: 100%;
+    margin: auto;
 }
+
 
 .title__background h1 {
     -webkit-text-stroke: 1px #fafafa10;
@@ -229,9 +282,9 @@ h2 {
 
 .main__title h1,
 h6 {
+    font-size: 50px;
     margin-bottom: 40px;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
-    ;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
