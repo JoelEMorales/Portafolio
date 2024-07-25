@@ -151,16 +151,15 @@ h2 {
 /* MAIN MENU */
 .menu-container {
     width: auto;
-    padding: 10px 0;    
+    padding: 10px 0;
     display: flex;
 
     position: sticky;
     top: 0;
 
     margin-bottom: 50px;
-    
+
     z-index: 1000;
-    
 }
 
 .nav-container {
@@ -199,6 +198,7 @@ h2 {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     .nav-container {
@@ -207,11 +207,13 @@ h2 {
     }
 
     .nav-container a {
-        font-size: 0.875em; /* Tamaño de fuente reducido */
+        font-size: 0.875em;
+        /* Tamaño de fuente reducido */
     }
 
     .nav-container a:hover {
-        font-size: 1em; /* Tamaño de fuente reducido */
+        font-size: 1em;
+        /* Tamaño de fuente reducido */
     }
 }
 
@@ -221,33 +223,53 @@ h2 {
 
     .menu-container {
         width: auto;
-        padding: 10px 0;    
+        padding: 10px 0;
         display: flex;
-    
+
         position: sticky;
         top: 0;
-    
+
         margin-bottom: 50px;
-        
+
         z-index: 1000;
-        
+
     }
+
     .nav-container {
         margin: auto;
         width: auto;
     }
 
     .nav-container a {
-        font-size: 0.61em; /* Tamaño de fuente aún más reducido */
+        font-size: 0.61em;
+        /* Tamaño de fuente aún más reducido */
     }
 
     .nav-container a:hover {
-        font-size: 0.875em; /* Tamaño de fuente reducido */
+        font-size: 0.875em;
+        /* Tamaño de fuente reducido */
     }
 
 
 
     /* MAIN TITLE */
+    .title__background h1 {
+        -webkit-text-stroke: 1px #fafafa10;
+        color: rgba(255, 255, 255, 0.042);
+        font-size: 44px;
+    }
+
+    .main__title h1,
+    h6 {
+        font-size: 44px;
+        margin-bottom: 40px;
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+        ;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+
 }
 
 
@@ -261,7 +283,8 @@ h2 {
 /* MAIN TITLE */
 .title__container {
     position: relative;
-    width: 100%;    
+    width: 100%;
+
     text-align: center;
     padding: 200px 0;
     margin-bottom: 100px;
@@ -277,17 +300,20 @@ h2 {
 .title__background h1 {
     -webkit-text-stroke: 1px #fafafa10;
     color: rgba(255, 255, 255, 0.042);
-    font-size: 150px;
+    font-size: clamp(2.5rem, 7vw, 9rem);
 }
 
 .main__title h1,
 h6 {
-    font-size: 50px;
-    margin-bottom: 40px;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);;
+    font-size: clamp(1.2rem, 2.7vw, 9rem);
+    margin-bottom: 2.2vw;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+    ;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+
 
 
 
@@ -342,7 +368,7 @@ h6 {
     border-radius: 12px;
     background: rgb(26, 18, 34);
     background: radial-gradient(circle, rgb(48, 29, 65) 0%, rgb(16, 8, 36) 50%, rgb(1, 0, 27) 90%);
-/*     
+    /*     
     background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.04) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.01); */
     backdrop-filter: blur(8.5px);
     padding: 32px 2em;
@@ -524,7 +550,7 @@ h6 {
     padding: 15px;
 }
 
-.proyect__card__4 img{
+.proyect__card__4 img {
     opacity: 0.9;
 }
 
@@ -1040,5 +1066,3 @@ h6 {
         transform: translateX(0);
     }
 }
-
-
