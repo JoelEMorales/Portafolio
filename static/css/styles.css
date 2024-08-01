@@ -706,15 +706,10 @@ h6 {
     padding: 10px 0.5em;
 }
 
-
-
-
-
 .line {
     border-radius: 20px;
     margin: 0 auto;
 }
-
 
 
 .row-container {
@@ -812,37 +807,39 @@ h6 {
 
 
 
+
+
 /* ABOUT ME */
+#aboutme{
+    width: 100%;
+    
+}
 
 .text__me h2 {
     text-align: left;
-    font-size: 40px;
+    font-size: clamp(2rem, 1.3vw + 1rem, 3rem);
 }
 
 .text__me p {
-    width: 400px;
-    font-size: 20px;
+    width: clamp(12rem, 22vw, 30rem);
+    font-size: clamp(1rem, 0.2vw + 1rem, 3rem);
     text-align: left;
 }
 
 .article__container {
     margin: 100px 0;
-    padding: 80px 0;
-    /* border: solid red; */
+    padding: 100px 0;
 }
 
 .card__container {
-    /* Grid */
-    display: grid;
+    display: flex;
     gap: 50px;
 }
 
 .card__aboutme {
     margin: 0 auto;
-    min-height: 750px;
-    min-width: 650px;
-    max-width: 650px;
-    text-align: center;
+    height: clamp(35rem, 35vw, 50rem);
+    width: clamp(14rem, 30vw, 50rem);
 }
 
 
