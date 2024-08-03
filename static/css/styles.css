@@ -849,22 +849,28 @@ h6 {
 
 /* KILLS */
 
-.title__kills h1 {
+#kills{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 200px;
+}
+
+.title__kills h2 {
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
     ;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(2rem, 2.2vw, 4rem);
 }
 
 .cards__kills {
     position: sticky;
     top: 200px;
     margin: 0 auto;
-    min-height: 400px;
-    max-width: 800px;
-    min-width: 800px;
+    min-height: 25rem;
+    max-width: 50rem;
     text-align: center;
     margin-bottom: 100px;
     transition: top 0.2s, transform 0.2s;
@@ -873,20 +879,33 @@ h6 {
 .cards__kills.scaled {
     transform: scale(0.8);
     top: 200px;
-    /* Añadir 20px al top */
     transition: top 0.2s, transform 0.2s;
 }
 
 .grid__card__kills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border-top: solid 1px rgba(255, 255, 0.1);
     border-bottom: solid 1px rgba(255, 255, 0.1);
     border-image: radial-gradient(white 43%, var(--color--background) 83%) 1;
     background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.137) 0%, rgba(126, 61, 255, 0) 100%), rgb(11, 1, 29);
     border-radius: 12px;
-    padding: 32px 2em
+    padding: 32px;
 }
 
-
+.kills__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    gap: 1rem;
+}
+.kills__container svg {
+    display: block;
+    width: clamp(3.75rem, 3.125vw, 5rem);
+    height: clamp(3.75rem, 3.125vw, 5rem);
+  }
 
 
 
