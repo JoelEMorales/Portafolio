@@ -648,9 +648,9 @@ h6 {
 }
 
 @media (min-width: 1561px) {
- .scroll_container{
-    display: none;
- }
+    .scroll_container {
+        display: none;
+    }
 }
 
 @media (max-width: 1561px) {
@@ -732,7 +732,7 @@ h6 {
 }
 
 .kills-proyect {
-    margin: auto ;
+    margin: auto;
     display: flex;
     align-items: center;
     gap: clamp(0.3rem, 2vw, 15rem);
@@ -810,9 +810,9 @@ h6 {
 
 
 /* ABOUT ME */
-#aboutme{
+#aboutme {
     width: 100%;
-    
+
 }
 
 .text__me h2 {
@@ -849,7 +849,7 @@ h6 {
 
 /* KILLS */
 
-#kills{
+#kills {
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -894,99 +894,142 @@ h6 {
     padding: 32px;
 }
 
-.kills__container{
+.kills__container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; 
+    height: 100%;
     gap: 1rem;
 }
+
 .kills__container svg {
     display: block;
     width: clamp(3.75rem, 3.125vw, 5rem);
     height: clamp(3.75rem, 3.125vw, 5rem);
-  }
-
-
-
-
-
-/* CONTACT ME AND STUDIES */
-.grid__container {
-    height: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
 }
 
-.text__studies {
+
+
+
+
+/* STUDIES */
+#studies {
+    width: 100%;
+}
+
+.grid__container {
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+.student__card {
+    width: clamp(14rem, 28vw, 50rem);
+}
+
+.student_text h3 {
+    font-size: clamp(1rem, 1.2vw, 4rem);
+    padding-bottom: 1rem;
+}
+
+.student_text h4 {
+    font-size: clamp(0.8rem, 0.9vw, 4rem);
+}
+
+.student_text p {
+    font-size: clamp(0.7rem, 0.8vw, 4rem);
+    margin-top: 0.3rem;
+}
+
+.text__studies_container {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* FORM */
-.form__content {
-    display: grid;
-    gap: 20px;
+.form__card {
+    width: clamp(14rem, 28vw, 50rem);
 }
 
-.form__content label {
-    margin-bottom: 20px;
+.form_text h3 {
+    font-size: clamp(1rem, 1.2vw, 4rem);
+    padding-bottom: 1rem;
+}
+
+.form_text label {
+    display: block;
+    font-size: clamp(0.9rem, 0.9vw, 4rem);
+}
+
+.form_text p {
+    font-size: clamp(0.1rem, 0.8vw, 4rem);
+    margin-top: 0.3rem;
 }
 
 .date__container {
-    width: auto;
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 30px;
-    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0.313rem 0 1.25rem 0;
 }
 
 .span__icon {
     background-color: var(--color--span);
     text-align: center;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 0.313rem 0rem 0rem 0.313rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem
 }
 
 .span__icon svg {
-    margin: auto;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-.input {
-    width: auto;
-    border: solid #2d2641;
-    border-radius: 0 5px 5px 0;
+input.input,
+textarea.message {
+    flex: 1;
+    width: 100%;
+    border: 1px solid #2d2641;
+    border-radius: 0 0.313rem 0.313rem 0;
     background-color: #2d2641;
     color: white;
-    text-indent: 6px;
+    text-indent: 0.375rem;
+    padding: 0.1rem;
 }
 
-.message {
-    width: auto;
-    height: auto;
-    border: solid #2d2641;
-    border-radius: 0 5px 5px 0;
-    background-color: #2d2641;
-    color: white;
-    text-indent: 6px;
+input.input{
+    min-height: 2.1rem;
+}
+
+textarea.message {
+    resize: vertical;
+    min-height: 2rem;
 }
 
 
+@media (max-width: 1561px) {
+    .grid__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+
+    .form_text label {
+        display: none;
+    }
+
+    .form_text h3 {
+        text-align: center;
+    }
+
+}
 
 /* #hola{
     grid-column: 1/4
