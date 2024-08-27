@@ -910,9 +910,7 @@ h6 {
 
 
 
-
-
-/* STUDIES */
+/* STUDIES + FORM */
 #studies {
     width: 100%;
 }
@@ -920,14 +918,13 @@ h6 {
 .grid__container {
     height: 25rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 2.5rem;
 }
 
-.student__card {
-    width: clamp(14rem, 28vw, 50rem);
-}
 
+
+/* STUDIES */
 .student_text h3 {
     font-size: clamp(1rem, 1.2vw, 4rem);
     padding-bottom: 1rem;
@@ -951,10 +948,6 @@ h6 {
 
 
 /* FORM */
-.form__card {
-    width: clamp(14rem, 28vw, 50rem);
-}
-
 .form_text h3 {
     font-size: clamp(1rem, 1.2vw, 4rem);
     padding-bottom: 1rem;
@@ -1015,11 +1008,6 @@ textarea.message {
 
 
 @media (max-width: 1561px) {
-    .grid__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: auto;
-    }
 
     .form_text label {
         display: none;
