@@ -1006,6 +1006,14 @@ textarea.message {
     min-height: 2rem;
 }
 
+.button__form{
+    display: flex;
+    justify-content: center;
+}
+.button__form button{
+    height: 100%;
+    padding: 0.5vw 3vw;
+}
 
 @media (max-width: 1561px) {
 
@@ -1018,25 +1026,6 @@ textarea.message {
     }
 
 }
-
-/* #hola{
-    grid-column: 1/4
-} */
-
-
-
-
-/* .grid-card {
-    border: solid 1px rgba(255, 255, 255, 0.1);
-    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.04) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.01);
-    backdrop-filter: blur(8.5px);
-    border-radius: 12px;
-    padding: 32px 2em
-} */
-
-
-
-
 
 
 
