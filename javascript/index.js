@@ -34,47 +34,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//SLIDER EJE X
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const sliderTrack = document.querySelector('.slide__track_L');
-    const slides = document.querySelectorAll('.slide');
-    const slideCount = slides.length;
+    // Función general para configurar sliders
+    const setupSlider = (trackSelector, slideSelector, gap = 24, axis = 'X') => {
+        const sliderTrack = document.querySelector(trackSelector);
+        const slides = document.querySelectorAll(slideSelector);
+        const slideCount = slides.length;
+        
+        if (sliderTrack && slideCount > 0) {
+            // Clonamos los elementos
+            for (let i = 0; i < slideCount; i++) {
+                const clone = slides[i].cloneNode(true);
+                sliderTrack.appendChild(clone);
+            }
 
-    // Clonamos los elementos para tener una copia completa del set
-    for (let i = 0; i < slideCount; i++) {
-        const clone = slides[i].cloneNode(true);
-        sliderTrack.appendChild(clone);
-    }
+            // Aseguramos el tamaño del track
+            const totalSlides = document.querySelectorAll(slideSelector).length;
+            const slideSize = axis === 'X' ? slides[0].offsetWidth : slides[0].offsetHeight; 
+            const trackSize = totalSlides * (slideSize + gap);
 
-    // Aseguramos que la animación ocupe el espacio necesario
-    const totalSlides = document.querySelectorAll('.slide').length;
-    const slideWidth = slides[0].offsetWidth + 24; // including gap
-    const trackWidth = totalSlides * slideWidth;
+            // Ajustamos la medida según el eje
+            if (axis === 'X') {
+                sliderTrack.style.width = `${trackSize}px`;
+            } else {
+                sliderTrack.style.height = `${trackSize}px`;
+            }
+        }
+    };
 
-    sliderTrack.style.width = `${trackWidth}px`;
+
+    //SLIDER EJE X
+
+    // Configuramos sliders para diferentes elementos y ejes
+    setupSlider('.slide__track_L', '.slide', 24, 'X');
+    setupSlider('.slide__track_R', '.slide', 24, 'X');
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const sliderTrack = document.querySelector('.slide__track_R');
-    const slides = document.querySelectorAll('.slide');
-    const slideCount = slides.length;
-
-    // Clonamos los elementos para tener una copia completa del set
-    for (let i = 0; i < slideCount; i++) {
-        const clone = slides[i].cloneNode(true);
-        sliderTrack.appendChild(clone);
-    }
-
-    // Aseguramos que la animación ocupe el espacio necesario
-    const totalSlides = document.querySelectorAll('.slide').length;
-    const slideWidth = slides[0].offsetWidth + 24; // including gap
-    const trackWidth = totalSlides * slideWidth;
-
-    sliderTrack.style.width = `${trackWidth}px`;
-});
-
 
 
 
