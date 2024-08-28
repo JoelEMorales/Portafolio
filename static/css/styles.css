@@ -827,8 +827,8 @@ h6 {
 }
 
 .article__container {
-    margin: 100px 0;
-    padding: 100px 0;
+    margin: 6.25rem 0;
+    padding: 6.25rem 0;
 }
 
 .card__container {
@@ -1027,6 +1027,25 @@ textarea.message {
 
 }
 
+/* FOOTER */
+
+.footer__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.creator__data{
+    display: flex;
+}
+
+.creator__data p{
+    font-size: clamp(0.5rem, 0.8vw, 4rem);;
+}
+
+.used__skills p{
+    font-size: clamp(0.5rem, 1vw, 4rem);;
+}
 
 
 
