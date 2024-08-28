@@ -1037,6 +1037,7 @@ textarea.message {
 
 .creator__data{
     display: flex;
+    gap: 10px;
 }
 
 .creator__data, .used__skills p{

@@ -96,3 +96,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     sliderTrack.style.width = `${trackWidth}px`;
 });
+
+
+
+
+// COPIAR EN PORTAPAPELES   
+document.querySelectorAll('.boton-copiar').forEach(boton => {
+  boton.addEventListener('click', async (event) => {
+    const targetId = boton.getAttribute('data-target'); // Obtener el ID del div a copiar
+    const texto = document.getElementById(targetId).innerHTML; // Obtener el texto del div
+
+    try {
+      await navigator.clipboard.writeText(texto); // Copiar al portapapeles
+      console.log(`Contenido del div ${targetId} copiado al portapapeles`);
+    } catch (err) {
+      console.error('Error al copiar: ', err);
+    }
+  });
+});
