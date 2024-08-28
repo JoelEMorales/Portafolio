@@ -74,7 +74,7 @@ h2 {
 
     color: white;
     background-color: var(--color--button);
-    border: solid 1px #fafafa10;
+    border: solid 1px #fafafa2d;
     border-radius: 20px;
     padding: 10px;
 }
@@ -1039,11 +1039,7 @@ textarea.message {
     display: flex;
 }
 
-.creator__data p{
-    font-size: clamp(0.5rem, 0.8vw, 4rem);;
-}
-
-.used__skills p{
+.creator__data, .used__skills p{
     font-size: clamp(0.5rem, 1vw, 4rem);;
 }
 
