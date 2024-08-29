@@ -118,59 +118,6 @@ document.querySelectorAll('.boton-copiar').forEach(boton => {
 
 
 
-// // Variables para credenciales de Email.js
-// let CREDENCIALES_EMAILJS;
-// let serviceID;
-// let templateID;
-
-// // Obtén las credenciales antes de permitir el envío del formulario
-// fetch("http://localhost:3000/credenciales-emailjs")
-//     .then(response => response.json())
-//     .then(config => {
-//         CREDENCIALES_EMAILJS = config.credencialEmail;
-//         serviceID = config.serviceID;
-//         templateID = config.templateID;
-
-//         // Inicializa EmailJS una vez que las credenciales están cargadas
-//         emailjs.init(CREDENCIALES_EMAILJS);
-//     })
-//     .catch(err => console.error('Error al cargar credenciales:', err));
-
-// // Enviar email de consulta
-// document.getElementById("form").addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     const btn = document.getElementById("boton_enviar");
-//     btn.innerHTML = "Cargando...";
-
-//     // Asegúrate de que las credenciales están disponibles
-//     if (CREDENCIALES_EMAILJS && serviceID && templateID) {
-//         emailjs.sendForm(serviceID, templateID, this)
-//             .then(() => {
-//                 btn.innerHTML = "Enviar";
-//                 Swal.fire({
-//                     title: "¡Consulta enviada!",
-//                     text: "Gracias por su mensaje, nos pondremos en contacto.",
-//                     icon: "success"
-//                 }).then((result) => {
-//                     if (result.isConfirmed) {
-//                         this.reset(); // Restablece el formulario
-//                         setTimeout(() => {
-//                             window.location.href = '/';
-//                         }, 500);
-//                     }
-//                 });
-//             })
-//             .catch((err) => {
-//                 btn.innerHTML = "Enviar";
-//                 console.error('Error al enviar el correo: ', err);
-//             });
-//     } else {
-//         btn.innerHTML = "Enviar";
-//         console.error('Error: Las credenciales no están disponibles');
-//     }
-// });
-
-
 // Obtener las credenciales desde el backend
 fetch('http://localhost:3000/emailjs-credentials')
   .then(response => response.json())
