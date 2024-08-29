@@ -183,12 +183,12 @@ fetch('http://localhost:3000/emailjs-credentials')
     form.addEventListener('submit', function(event) {
       event.preventDefault();
 
-      sendButton.value = 'Enviando...';
+      sendButton.value = 'Cargando...';
 
       emailjs.sendForm(credentials.serviceID, credentials.templateID, this)
         .then(() => {
           sendButton.value = 'Enviar Correo';
-          alert('Correo Enviado!');
+          alert('Mensaje Enviado!');
         }, (error) => {
           sendButton.value = 'Enviar Correo';
           alert('Error al enviar el correo: ' + JSON.stringify(error));

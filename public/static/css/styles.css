@@ -64,19 +64,19 @@ h2 {
 }
 
 /* BUTTON */
+
 .btn {
     position: relative;
     display: block;
     overflow: hidden;
     transition: all 500ms ease;
     font-weight: 700;
-
-
     color: white;
     background-color: var(--color--button);
     border: solid 1px #fafafa2d;
     border-radius: 20px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .btn::before {
@@ -473,6 +473,7 @@ h6 {
     border: solid 1px #fafafa10;
     border-radius: 50px;
     list-style: none;
+    cursor: pointer;
 }
 
 .icons-social a {
@@ -1015,6 +1016,13 @@ textarea.message {
     padding: 0.5vw 3vw;
 }
 
+#send_button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 @media (max-width: 1561px) {
 
     .form_text label {
@@ -1038,6 +1046,7 @@ textarea.message {
 .creator__data{
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 
 .creator__data, .used__skills p{
