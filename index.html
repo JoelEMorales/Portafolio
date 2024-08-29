@@ -6,11 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="/static/css/styles.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+  <link rel="stylesheet" href="/public/static/css/styles.css" />
 </head>
 
 <body>
@@ -86,10 +82,11 @@
         <div class="card_item grid-card-blur effect__reveal" id="element_card_2">
           <div class="text center">
             <div class="avatar-container">
-              <img style="width: 300px;" src="/static/img/photosaboutme/WhatsApp Image 2024-05-24 at 11.21.17.jpeg"
-                alt="Avatar Logo" class="avatar" aling="left">
+              <img style="width: 300px;"
+                src="/public/static/img/photosaboutme/WhatsApp Image 2024-05-24 at 11.21.17.jpeg" alt="Avatar Logo"
+                class="avatar" aling="left">
             </div>
-            <a type="button" href="/static/archives/Curriculum.Programador - Joel Morales.pdf" class="btn btn--1"
+            <a type="button" href="/public/static/archives/Curriculum.Programador - Joel Morales.pdf" class="btn btn--1"
               download="Curriculum.Programador - Joel Morales.pdf">Descargar
               CV</a>
           </div>
@@ -463,7 +460,7 @@
         <div class="card_container_proyects">
 
           <div class="card_item_proyect grandiente__circle__2 effect__reveal">
-            <img src="/static/img/background/fondo_proyect_2.png">
+            <img src="/public/static/img/background/fondo_proyect_2.png">
           </div>
 
           <div class="card_item_proyect grid-card-blur effect__reveal">
@@ -477,7 +474,7 @@
           </div>
 
           <div class="card_item_proyect grandiente__circle__2 effect__reveal">
-            <img src="/static/img/background/fondo_proyect_2.png">
+            <img src="/public/static/img/background/fondo_proyect_2.png">
           </div>
 
           <div class="card_item_proyect grandiente__circle__2 effect__reveal">
@@ -487,27 +484,27 @@
               <div class="slide__track_proyect">
 
                 <div class="slide_img">
-                  <img src="/static/img/proyects/bocatto_pag_1.png" style="width: 200px; border-radius: 10px;">
+                  <img src="/public/static/img/proyects/bocatto_pag_1.png" style="width: 200px; border-radius: 10px;">
                 </div>
 
                 <div class="slide_img">
-                  <img src="/static/img/proyects/bocatto_pag_2.png" style="width: 200px; border-radius: 10px;">
+                  <img src="/public/static/img/proyects/bocatto_pag_2.png" style="width: 200px; border-radius: 10px;">
                 </div>
 
                 <div class="slide_img">
-                  <img src="/static/img/proyects/bocatto_pag_3.png" style="width: 200px; border-radius: 10px;">
+                  <img src="/public/static/img/proyects/bocatto_pag_3.png" style="width: 200px; border-radius: 10px;">
                 </div>
 
                 <div class="slide_img">
-                  <img src="/static/img/proyects/bocatto_pag_4.png" style="width: 200px; border-radius: 10px;">
+                  <img src="/public/static/img/proyects/bocatto_pag_4.png" style="width: 200px; border-radius: 10px;">
                 </div>
 
                 <div class="slide_img">
-                  <img src="/static/img/proyects/bocatto_pag_5.png" style="width: 200px; border-radius: 10px;">
+                  <img src="/public/static/img/proyects/bocatto_pag_5.png" style="width: 200px; border-radius: 10px;">
                 </div>
 
                 <div class="slide_img">
-                  <img src="/static/img/proyects/bocatto_pag_6.png" style="width: 200px; border-radius: 10px;">
+                  <img src="/public/static/img/proyects/bocatto_pag_6.png" style="width: 200px; border-radius: 10px;">
                 </div>
 
               </div>
@@ -530,7 +527,7 @@
             </div>
 
             <div>
-              <img src="/static/img/proyects/bocato di pollo.png" class="img__computer">
+              <img src="/public/static/img/proyects/bocato di pollo.png" class="img__computer">
             </div>
 
           </div>
@@ -620,7 +617,7 @@
               <div class="telephone__card">
                 <div class="telephone__content">
                   <div class="telephone__proyect">
-                    <img src="/static/img/proyects/movil-bocatto.png" class="img__telephone">
+                    <img src="/public/static/img/proyects/movil-bocatto.png" class="img__telephone">
                   </div>
                 </div>
               </div>
@@ -857,10 +854,10 @@
               Contactame
             </h3>
 
-            <div class="form__content">
+            <form class="form__content" id="contact_form">
 
               <div>
-                <label>Email</label>
+                <label for="email">Email</label>
 
                 <div class="date__container">
                   <span class="span__icon">
@@ -873,12 +870,13 @@
                     </svg>
                   </span>
 
-                  <input class="input" placeholder="Su Correo">
+                  <input type="text" class="input form-control" name="email" id="email" placeholder="Su Correo"
+                    required>
                 </div>
               </div>
 
               <div>
-                <label>Telefono</label>
+                <label for="phone">Telefono</label>
 
                 <div class="date__container">
                   <span class="span__icon">
@@ -891,12 +889,13 @@
                     </svg>
                   </span>
 
-                  <input class="input" placeholder="Su Telefono">
+                  <input type="number" class="input form-control" name="phone" id="phone" placeholder="Su Telefono"
+                    required>
                 </div>
               </div>
 
               <div>
-                <label>Mensaje</label>
+                <label for="message">Mensaje</label>
 
                 <div class="date__container">
                   <span class="span__icon">
@@ -909,16 +908,18 @@
                     </svg>
                   </span>
 
-                  <textarea class="message" placeholder="Escriba su mensaje"></textarea>
+                  <textarea class="message form-control" name="message" id="message"
+                    placeholder="Escriba su mensaje"></textarea>
                 </div>
               </div>
 
               <div class="button__form effect__reveal">
-                <button type="button" class="btn btn--1">Enviar</button>
-              </div>
+                <input type="submit" class="btn btn--1" id="send_button" value="Send Email">
 
-            </div>
+            </form>
 
+            <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
           </div>
         </div>
 
@@ -936,9 +937,9 @@
       </div>
 
       <div class="creator__data">
-        <svg type="button" data-target="texto2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="boton-copiar icon icon-tabler icons-tabler-outline icon-tabler-copy">
+        <svg type="button" data-target="texto2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="boton-copiar icon icon-tabler icons-tabler-outline icon-tabler-copy">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path
             d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
@@ -951,7 +952,7 @@
     </article>
   </footer>
 
-  <script src="/javascript/index.js"></script>
+  <script src="/public/javascript/index.js"></script>
 </body>
 
 </html>
