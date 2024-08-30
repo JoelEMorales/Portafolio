@@ -9,8 +9,9 @@ dotenv.config();
 const app = express();
 app.use(cors());  // Permitir que el frontend se comunique con el backend
 
-// Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+// Servir archivos estáticos desde las carpetas 'public/javascript' y 'public/static/css'
+app.use('/javascript', express.static(path.join(__dirname, 'public/javascript')));
+app.use('/static/css', express.static(path.join(__dirname, 'public/static/css')));
 
 // Ruta para enviar las credenciales de EmailJS
 app.get('/emailjs-credentials', (req, res) => {
@@ -21,12 +22,17 @@ app.get('/emailjs-credentials', (req, res) => {
     });
 });
 
-// Ruta para manejar todas las demás peticiones y servir el archivo index.html
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Servir el archivo index.html en la raíz
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Iniciar el servidor en el puerto 3000
+// Manejar rutas no definidas (ej. SPA routing)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Iniciar el servidor en el puerto definido en las variables de entorno o el puerto 3000
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
